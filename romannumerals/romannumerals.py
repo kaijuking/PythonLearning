@@ -1,10 +1,5 @@
 def roman_numerals_v1(x):
     
-    # setup variables
-    total = 0
-    tmp_list = []
-    roman_val = get_roman_values()
-
     # get rid of whitespaces
     x = get_rid_of_whitespaces(x)
 
@@ -12,7 +7,10 @@ def roman_numerals_v1(x):
     if len(x) == 0:
         return 0
 
-    # setup variables for further processing
+    # setup variables
+    total = 0
+    tmp_list = []
+    roman_val = get_roman_values()
     input_length = len(x)
     input_str = x.lower()
 
@@ -42,17 +40,17 @@ def roman_numerals_v1(x):
 # v2 function - (romans_str: str) -> int > this tells the user the function take a string and returns an integer
 # Many thanks to Karina for her help and input
 def roman_numerals_v2(romans_str: str) -> int:
-
-    # setup variables
-    total = 0
-    roman_val = get_roman_values()
-   
+ 
     # get rid of whitespaces
     input_string = get_rid_of_whitespaces(romans_str)
 
     # return 0 if empty string
     if len(input_string) == 0:
         return 0
+
+    # setup variables
+    total = 0
+    roman_val = get_roman_values()
 
     # create a list of numeric values based on the input string
     tmp_list = [roman_val[item.lower()] for item in input_string]
