@@ -40,6 +40,7 @@ def roman_numerals_v1(x):
 
 
 # v2 function - (romans_str: str) -> int > this tells the user the function take a string and returns an integer
+# Many thanks to Karina for her help and input
 def roman_numerals_v2(romans_str: str) -> int:
 
     # setup variables
