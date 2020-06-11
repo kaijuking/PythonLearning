@@ -1,6 +1,6 @@
 def palindrome_v1(s):
 
-    # Check if input is a string
+    # Check if input is a string - test
     if isinstance(s, str):
         # My approach
         return is_palindrome(s)
