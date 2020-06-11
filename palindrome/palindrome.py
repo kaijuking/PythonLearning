@@ -3,7 +3,7 @@ def palindrome_v1(s):
     # Check if input is a string
     if isinstance(s, str):
         # My approach
-        return is_palidrome(s)
+        return is_palindrome(s)
     else:
         return False
 
@@ -40,7 +40,7 @@ def initial_check(string_to_process):
         return string_to_process
 
 
-def is_palidrome(string_to_process):
+def is_palindrome(string_to_process):
 
     s = initial_check(string_to_process)
 
