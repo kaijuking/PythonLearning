@@ -30,11 +30,6 @@ def validate_is_digit(input_list):
             return True
 
 
-def get_user_input(message_s):
-    user_input = input("{0}".format(message_s))
-    return user_input
-
-
 def sum_two_numbers(x, y):
     print("{0} + {1} = {2}".format(x, y, x + y))
     return x + y
