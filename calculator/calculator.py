@@ -1,5 +1,5 @@
 # Exercise: 'calculator'
-# Write a simple calculator taht answers questions like:
+# Write a simple calculator that answers questions like:
 # 3 + 5, 8 / 2, 4 * 4, 18 - 36
 
 def calculate():
