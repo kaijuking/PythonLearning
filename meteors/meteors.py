@@ -20,12 +20,13 @@ def get_data():
     # Make a GET request to Nasa to get the data
     meteor_data = requests.get('https://data.nasa.gov/resource/gh4g-9sfh.json')
     if  meteor_data.status_code == 200:
+        # returns a list of dictionaries (ex: [{...}, {...}, etc])
         return meteor_data
     else:
         print("Expected Response = 200. Actual Response = {0}. Please try again.".format(meteor_data.status_code))
 
 
-def process_data(data_to_parse, destination):
+def process_data(data_to_parse: list, destination: tuple):
     
     # temp variable
     unsorted_data = []
@@ -35,7 +36,7 @@ def process_data(data_to_parse, destination):
     for location in data_to_parse:
         if "geolocation" in location:
 
-            # parse the current latitude and longitude values from the JSON
+            # parse the current latitude and longitude values from item
             current_location = (float(location["geolocation"]["latitude"]), float(location["geolocation"]["longitude"]))
 
             # use geopy to calculate the distance bewtween the two locations
