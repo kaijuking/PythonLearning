@@ -5,6 +5,7 @@ from geopy.units import miles
 # Notes
 # Geopy found from pypi.org - https://pypi.org/project/geopy/
 # Exercise part of Cloud Guru video (Python for Beginners - Deprecated Aug 2020), lesson Chapter 2.12
+# User will need to 'pip install' both requests and geopy in order to execute this 
 
 
 def meteors():
@@ -51,7 +52,7 @@ def process_data(data_to_parse, destination):
     print("Sorting The Data")
     sorted_data = sorted(unsorted_data)
 
-    # return the top ten closest meteors
+    # print the top ten closest meteors
     print("Top ten meteor names closest to Irvine, CA (MILES, METEOR NAME)")
     for i in range(10):
         print(sorted_data[i])
