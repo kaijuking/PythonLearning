@@ -2,28 +2,32 @@ import requests
 from geopy.distance import geodesic
 from geopy.units import miles
 
+# Notes
+# Geopy found from pypi.org - https://pypi.org/project/geopy/
+# Exercise part of Cloud Guru video (Python for Beginners - Deprecated Aug 2020), lesson Chapter 2.12
+
 
 def meteors():
-    #print("meteors")
-
     # Irvine, CA (latitude, longitude)
     destination = (33.669445, -117.823059)
     data = get_data()
     process_data(data.json(), destination)
 
 
-
 def get_data():
-    #print("data")
+    
+    # Make a GET request to Nasa to get the data
     meteor_data = requests.get('https://data.nasa.gov/resource/gh4g-9sfh.json')
-    return meteor_data
+    if  meteor_data.status_code == 200:
+        return meteor_data
+    else:
+        print("Expected Response = 200. Actual Response = {0}. Please try again.".format(meteor_data.status_code))
 
 
 def process_data(data_to_parse, destination):
     
     # temp variable
     unsorted_data = []
-    top_ten_locations = []
 
     # process data    
     print("Processing The Data")
