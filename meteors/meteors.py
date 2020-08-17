@@ -41,9 +41,8 @@ def process_data(data_to_parse, destination):
             # use geopy to calculate the distance bewtween the two locations
             distance = geodesic(current_location, destination).miles
 
-            # append the distance (in miles) to JSON
+            # append the distance
             unsorted_data.append((distance, location["name"]))
-            #location["total_distance"] = distance
 
         else:
             print('Skipping because no geolocation data was provided')
